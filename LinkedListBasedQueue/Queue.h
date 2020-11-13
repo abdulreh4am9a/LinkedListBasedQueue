@@ -64,4 +64,17 @@ public:
 		while (!empty())
 			pop();
 	}
+	void operator=(const queue<T>& rhs) {
+		make_empty();
+		node<T>* temp;
+		temp = rhs.f;
+		while (temp != NULL) {
+			push(temp->data);
+			temp = temp->next();
+		}
+	}
+	queue(const queue<T>& rhs) {
+		r = f = NULL;
+		operator=(rhs);
+	}
 };
