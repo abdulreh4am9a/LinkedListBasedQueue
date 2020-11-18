@@ -70,7 +70,7 @@ public:
 		temp = rhs.f;
 		while (temp != NULL) {
 			push(temp->data);
-			temp = temp->next();
+			temp = temp->next;
 		}
 	}
 	queue(const queue<T>& rhs) {
